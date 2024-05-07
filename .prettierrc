@@ -5,7 +5,7 @@
   "endOfLine": "lf",
   "overrides": [
     {
-      "files": ["*.ts"],
+      "files": ["*.ts", "*.js"],
       "options": {
         "parser": "typescript"
       }
