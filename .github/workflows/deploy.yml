@@ -23,17 +23,8 @@ jobs:
     - name: Build
       run: npm run build
 
-    - name: Stop existing PM2 process
-      run: pm2 stop all || true
-
     - name: Update project files
       run: git pull
-
-    - name: Install any new dependencies
-      run: npm install
-
-    - name: Rebuild the project
-      run: npm run build
 
     - name: Reload application with PM2
       run: pm2 reload ecosystem.config.js --env production
