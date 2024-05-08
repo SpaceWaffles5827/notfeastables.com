@@ -6,6 +6,7 @@ export default function Home() {
     return (
         <div className={styles.main}>
             <NavBar />
+            <h1>test</h1>
             <section className={styles.sectionOne}>
                 <div className={styles.floater}>
                     <div className={styles.flagContainer}>
