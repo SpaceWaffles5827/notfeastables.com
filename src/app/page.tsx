@@ -4,6 +4,7 @@ import NavBar from './comps/NavBar/NavBar';
 import Image from 'next/image';
 
 const version = process.env.NEXT_PUBLIC_APP_VERSION;
+const test = process.env.TEST;
 
 export default function Home() {
   return (
@@ -43,9 +44,11 @@ export default function Home() {
           />
           <h1>Settings</h1>
           <p>Version: {version}</p>
+          <p></p>
         </div>
       </section>
       <h1>Not Feastables</h1>
+      <p>{test}</p>
     </div>
   );
 }
