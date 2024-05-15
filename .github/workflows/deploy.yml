@@ -7,6 +7,7 @@ on:
 jobs:
   build-and-deploy:
     runs-on: self-hosted  # Assuming this runner is set up on your Nginx server
+    environment: prod-env
 
     steps:
     - name: Checkout code
@@ -24,7 +25,6 @@ jobs:
       run: |
         echo "NEXT_PUBLIC_APP_VERSION=$GITHUB_REF_NAME" >> $GITHUB_ENV
         echo "TEST=${{ secrets.TEST }}" >> $GITHUB_ENV
-        echo "Test bob: ${{ secrets.TEST }}"
 
     - name: Log Test Environment Variable
       run: echo "Value of TEST is $TEST"
