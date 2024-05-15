@@ -21,7 +21,13 @@ jobs:
       run: npm install
 
     - name: Inject version
-      run: echo "NEXT_PUBLIC_APP_VERSION=$GITHUB_REF_NAME" >> $GITHUB_ENV
+      run: |
+        echo "NEXT_PUBLIC_APP_VERSION=$GITHUB_REF_NAME" >> $GITHUB_ENV
+        echo "TEST=${{ secrets.TEST }}" >> $GITHUB_ENV
+
+    - name: Log Test Environment Variable
+      run: echo "Value of TEST is $TEST"
+
 
     - name: Build
       run: npm run build
