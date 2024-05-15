@@ -1,34 +1,36 @@
 module.exports = {
-  'env': {
-    'browser': true,
-    'es2021': true,
-    'node': true,
+  env: {
+    browser: true,
+    es2021: true,
+    node: true,
   },
-  'extends': [
+  extends: [
     'plugin:react/recommended',
     'google',
     'eslint:recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
+    'prettier',
   ],
-  'overrides': [
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx'],
+      rules: {
+        // No specific rules here after removing 'indent'
+      },
+    },
   ],
-  'parser': '@typescript-eslint/parser',
-  'parserOptions': {
-    'ecmaVersion': 'latest',
-    'sourceType': 'module',
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
   },
-  'plugins': [
-    'react',
-    '@typescript-eslint',
-  ],
-  'rules': {
-    'indent': ['error', 2],
+  plugins: ['react', '@typescript-eslint'],
+  rules: {
     'new-cap': 'off',
     'require-jsdoc': 'off',
     'react/prop-types': 'off',
     'linebreak-style': 'off',
-    'max-len': ['error', {code: 100}],
-    'camelcase': 'off',
+    camelcase: 'off',
   },
 };

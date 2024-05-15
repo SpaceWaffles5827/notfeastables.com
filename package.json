@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,md}\"",
+    "check-lint": "eslint --fix --quiet ."
   },
   "dependencies": {
     "next": "14.2.3",
@@ -18,9 +20,19 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
     "eslint": "^8.57.0",
     "eslint-config-next": "^14.2.3",
     "eslint-plugin-react": "^7.34.1",
+    "eslint": "^8.41.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-standard-with-typescript": "^34.0.1",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-next": "^0.0.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "globals": "^15.1.0",
     "typescript": "^5",
     "typescript-eslint": "^7.8.0"
