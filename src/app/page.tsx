@@ -49,6 +49,8 @@ export default function Home() {
       </section>
       <h1>Not Feastables</h1>
       <p>{test}</p>
+      <h1>edit one</h1>
+      <h1>edit two</h1>
     </div>
   );
 }
